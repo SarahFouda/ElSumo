@@ -1,0 +1,102 @@
+/* ====== start responsive ========== */
+@media (max-width:991px) {
+    .contact-top.float-right{
+        float: initial !important;
+        text-align: center;
+    }
+    .service_details_img{
+        margin-bottom: 70px;
+    }
+    .border-left{
+        border: none !important;
+        border-top: 1px solid #096780 !important
+
+    }
+    .header .header_search{
+        margin-right: 50px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .top-header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .banner_top h2{
+        font-size: 32px;
+    }
+    .seo_banner_content h2{
+        line-height: 48px;
+    }
+    .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+        opacity: 0;
+    }
+    .secondary_nav ul li a{
+        font-size: 25px;
+    }
+    .breadcrumb_content h1{
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .breadcrumb-link li {
+        font-size: 15px;
+    }
+    .main-title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .mt-100 {
+        margin-top: 40px;
+    }
+    .pb-100 {
+        padding-bottom: 40px;
+    }
+    .sec-title h2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+
+    .py-100 {
+        padding: 50px 0;
+    }
+    .loader-inner:before {
+        font-size: 40px;
+    }
+    .md-footer {
+        padding: 40px 0;
+    }
+    #back-to-top {
+        bottom: 50px;
+        font-size: 16px;
+    }
+    .team-img {
+        margin-top: 40px;
+    }
+    .portfolio_filter .work_portfolio_item + .work_portfolio_item {
+        margin-right: 0;
+        font-size: 12px;
+    }
+    /*************************************************************/
+    .header .open_search {
+        top: 100px;
+        right: 0;
+        width: 100%;
+    }
+   
+   
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+@media (min-width:992px) and (max-width: 1024px) {
+   
+}
+
+
+@media (max-width: 500px){
+   
+}

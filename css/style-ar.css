@@ -1,0 +1,101 @@
+.f_p ,.navigation , .header .phone span,.header .phone .phn_number, body {
+    font-family: 'cairo', sans-serif;
+}
+.submenu-indicator{
+    float: left;
+    margin-right: 6px;
+    margin-left: 0;
+}
+.nav-dropdown>li>a,.nav-dropdown>li{
+    float: right;
+}
+.nav-dropdown>li,.navigation-portrait .nav-menu>li>a{
+    text-align: right;
+}
+.navigation-portrait .submenu-indicator{
+    left: 0;
+    right: auto;
+}
+.header .phone i{
+    margin-left: 0;
+    margin-right: 5px;
+}
+.about_img img:nth-child(2){
+    left: 0;
+    right: auto;
+}
+.pr_50 {
+    padding-right: 0;
+    padding-left: 50px;
+}
+.ti-arrow-right  {
+    
+    transform: rotatey(180deg);
+    display: inline-block;
+}
+
+.footer-link ul>li i ,.widget_content .contact-details-alt i{
+    margin-right: 0;
+    margin-left: 5px;
+}
+.footer-link ul>li i{
+    transform: rotatey(180deg);
+    display: inline-block;
+}
+.learn_btn_two:before,.secondary_nav ul li a::after{
+    left: auto;
+    right: 0;
+}
+.top-title.comment-title::after {
+    right: 0;
+    left: auto;
+}
+.comment_info .avatar{
+    float: right;
+    right: 0;
+    left: auto;
+}
+.comment_info .rate,.rating>label{
+    float: left;
+}
+.comment_info .comment-text {
+    margin: 0 70px 0 0 ;
+}
+.review_form span {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.contact-form {
+    padding-left: 40px;
+    padding-right: 0;
+}
+.contact .con-icon{
+    left: auto;
+    right: 0;
+}
+.contact li{
+    padding-right: 70px;
+    padding-left: 0;
+}
+.lg-outer{
+    direction: ltr;
+}
+@media (max-width:767px) {
+    .nav-toggle{
+        left: 5%;
+        right: auto;
+            }
+}
+.border-left{
+    border-left: none !important;
+    border-right: 1px solid #096780 !important
+}
+.pagination li:first-child a,
+.pagination li:last-child a{
+    transform: rotateY(180deg);
+}
+.breadcrumb-link li:before {
+    margin-right: 0;
+    margin-left: 7px;
+}
