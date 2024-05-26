@@ -19,13 +19,13 @@ $(document).ready(function () {
 	  Navbar 
 	-------------------------------------------------------------------------------*/ 
     function navbarFixed() {
-        if ($('.header_area').length) {
+        if ($('header').length) {
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
                 if (scroll) {
-                    $(".header_area").addClass("navbar_fixed");
+                    $("header").addClass("navbar_fixed");
                 } else {
-                    $(".header_area").removeClass("navbar_fixed");
+                    $("header").removeClass("navbar_fixed");
                 }
             });
         };
@@ -248,9 +248,9 @@ $(document).ready(function () {
                 autoplay: true,
                 smartSpeed: 2000,
                 responsiveClass: true,
-                nav: false,
-                dots: true,
-                navText: ['<i class="ti-arrow-right"></i>', '<i class="ti-arrow-left"></i>'],
+                nav: true,
+                dots: false,
+                navText: ['<i class="fa-solid fa-chevron-right"></i>', '<i class="fa-solid fa-chevron-left"></i>'],
                 responsive: {
                     0: {
                         items: 1
@@ -259,7 +259,7 @@ $(document).ready(function () {
                         items: 2
                     },
                     1000: {
-                        items: 3
+                        items: 4
                     }
                 },
             })
@@ -267,20 +267,54 @@ $(document).ready(function () {
     }
     serviceSlider();
     
-    $('.ps-services__gallery').lightGallery({
-        selector: '.item a',
-        thumbnail: true,
-        share: false,
-        fullScreen: true,
-        autoplay: false,
-        autoplayControls: false,
-        actualSize: true,
-      
-    });
-    
     $('.doctors_carousel').owlCarousel({
         loop: false,
         margin: 20,
+        nav: true,
+        rtl: rtlVal,
+        dots: false,
+        autoplayTimeout: 3500,
+        autoplay: true,
+        navText: ['<i class="fa-solid fa-chevron-right"></i>', '<i class="fa-solid fa-chevron-left"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        },
+    
+    });
+    
+   
+    $('.reviews_carousel').owlCarousel({
+        loop: false,
+        margin: 20,
+        nav: false,
+        rtl: rtlVal,
+        dots: true,
+        autoplayTimeout: 3500,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 2
+            }
+        },
+    
+    });
+    $('.clients_carousel').owlCarousel({
+        loop: true,
+        margin: 50,
         nav: false,
         rtl: rtlVal,
         dots: true,
