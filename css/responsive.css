@@ -15,15 +15,23 @@
     .header .header_search{
         margin-right: 50px;
     }
-    .about_img img:nth-child(2){
-        position: initial;
-        margin-top: 30px;
-    }
+   
+    .nav-toggle {
+        left: 0;
+        right: auto;
+    } 
     .about_img::before{
         content: none;
     }
     .about_area{
         margin-bottom: 0 !important;
+    }
+    .blog-details{
+        display: block;
+        height: auto;
+    }
+    .blog-details .blog-img,.blog-details .blog-info{
+        width: auto;
     }
 }
 
@@ -104,18 +112,16 @@
         margin-bottom: 35px;
     }
     
-    .blog-details{
-        display: block;
-        height: auto;
-    }
-    .blog-details .blog-img,.blog-details .blog-info{
-        width: auto;
-    }
+    
     .client-img{
         width: auto;
     }
     .doctors{
         padding: 100px 0 120px;
+    }
+     .about_img img:nth-child(2){
+        position: initial;
+        margin-top: 30px;
     }
 }
 

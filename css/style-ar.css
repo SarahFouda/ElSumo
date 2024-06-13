@@ -4,6 +4,13 @@
     src: local('جذور مسطح'), local('flat-jooza'),
       url('../fonts/flat-jooza-regular.woff') format('woff');
   }
+  input[type=date]{
+    text-align: right;
+  }
+  input[type=date]::-webkit-calendar-picker-indicator {
+    left: 1.6rem;
+
+  }
 .f_p ,.navigation , .header .phone span, body {
     font-family: 'flat-jooza', sans-serif;
 }
