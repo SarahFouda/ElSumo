@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
     <link rel="stylesheet" href="vendors/animation/animate.css">
     <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightGallery-master/dist/css/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- style ar css -->
@@ -234,116 +235,233 @@
                         <li><a href="index.html">الرئيسية</a></li>
                         <li class="active">عن مركز سمو الصحة</li>
                     </ul> -->
-                    <h1 class="f_p"> إحجز موعدك الآن </h1>
+                    <h1 class="f_p"> المنتجات </h1>
                 </div>
             </div>
         </section>
          <!-- Start service section -->
          <section class="offers bg-white sec_pad">
             <div class="container">
-              <div class="row align-items-end">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="main-title d-block mb_40">
-                        <h2 class="f_p top-title wow fadeInUp"> إحجز موعدك الآن  </h2>
-                        <p class="sec-p wow fadeInUp" data-wow-delay=".1s">
-                            تمتع بأحدث وأقوى العروض من عيادات السمو ، بجودة وأسعار تنافسية!
-                        </p>
-                    </div>
-                </div>
-              </div>
-              <div class="sec-form">
-                <form>
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="main-title d-block mb_40">
-                        <h2 class="f_p top-title sm-title wow fadeInUp"> البيانات الشخصية  </h2>
-                    </div>
-                     <div class="form-group row">
-                      <label for="in2" class="col-sm-3 col-form-label">الإسم بالكامل</label>
-                      <div class="col-sm-9">
-                        <input type="text"  class="form-control" id="in2" placeholder="ادخل الاسم بالكامل">
-                      </div>
-                    </div>
-                     <div class="form-group row">
-                      <label for="in3" class="col-sm-3 col-form-label">الجوال</label>
-                      <div class="col-sm-9">
-                        <input type="text"  class="form-control" id="in3" placeholder="ادخل رقم الجوال">
-                      </div>
-                    </div>
-                     <div class="form-group row">
-                      <label for="in4" class="col-sm-3 col-form-label">البريد الالكترونى</label>
-                      <div class="col-sm-9">
-                        <input type="text"  class="form-control" id="in4" placeholder="ادخل البريد الالكترونى">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="in4" class="col-sm-3 col-form-label"> التاريخ المناسب</label>
-                        <div class="col-sm-9">
-                          <input type="date"  class="form-control" id="in4" placeholder="ادخل  التاريخ المناسب">
-                        </div>
-                      </div>
-                    <div class="form-group row">
-                        <label for="in4" class="col-sm-3 col-form-label">التوقيت </label>
-                        <div class="col-sm-9">
-                            <select class="custom-select form-control">
-                                <option selected >اختر التوقيت</option>
-                                <option value="1">صباحى</option>
-                                <option value="2">مسائى</option>
-                              </select>                                </div>
-                      </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
-                   
-                            <div class="main-title d-block mb_40">
-                                <h2 class="f_p top-title sm-title wow fadeInUp"> اختر الخدمة </h2>
-                            </div>
-                            <div class="form-group row">
-                                <label for="in4" class="col-sm-3 col-form-label">الخدمة </label>
-                                <div class="col-sm-9">
-                                    <select class="custom-select form-control">
-                                        <option selected >اختر الخدمة</option>
-                                        <option value="1">صباحى</option>
-                                        <option value="2">مسائى</option>
-                                      </select>                                
-                                    </div>
-                              </div>
-                            <div class="form-group row">
-                                <label for="in4" class="col-sm-3 col-form-label">التخصص </label>
-                                <div class="col-sm-9">
-                                    <select class="custom-select form-control">
-                                        <option selected >اختر التخصص</option>
-                                        <option value="1">صباحى</option>
-                                        <option value="2">مسائى</option>
-                                      </select>                                
-                                    </div>
-                              </div>
-                            <div class="form-group row">
-                                <label for="in4" class="col-sm-3 col-form-label">الطبيب </label>
-                                <div class="col-sm-9">
-                                    <select class="custom-select form-control">
-                                        <option selected >اختر الطبيب</option>
-                                        <option value="1">صباحى</option>
-                                        <option value="2">مسائى</option>
-                                      </select>                                
-                                    </div>
-                              </div>
-                           
-                              
-                        
-                            
-                          
-                </div>
                
+              <div class="row justify-content-between align-items-center">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="side-card search-card">
+                        <form class="search_form" action="search.php">
+                            <input type="text" name="search" class="keyword form-control" placeholder="هل تبحث عن منتج معين ؟...">
+                            <button type="submit" class="form-control-submit"><i class="ti-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-12">
+                    <div class="sec-form pro-form">
+                        <form>
+                            <select  id="product_filter" class="product_filter custom-select form-control">
+                                <option value="*" selected > ترتيب حسب </option>
+                                <option value=".value1">الاقل سعر</option>
+                                <option value=".value2">الاكثر سعر</option>
+                              </select> 
+                        </form>
+                    </div>
+                </div>
+             
               </div>
-              <div class="btn-book btn-offers text-center mt_40">
-                <a href="checkout">احجز العرض الآن <i class="fa-regular fa-calendar-days"></i></a>
-            </div>
-            </form>
-        </div>
+                    <div class="row product_gallery" id="work-product">
+                        <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value1" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/13.webp" class="img-fluid" alt="offer-img">
+                                        <div class="sale"><span>خصم 20%</span></div>
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                   <p>
+                                       <span class="price price-sale"> 500 <span>ريال سعودى</span></span>
+                                    <span class="price"> 500 <span>ريال سعودى</span></span>
+                                   </p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value2" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/14.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value1" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/15.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value2" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/16.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value1" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/19.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value2" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/20.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value1" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/25.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-lg-3 col-md-4 col-12 wow fadeInUp product_item value2" data-wow-delay=".2s">
+                            <div class="sec-offer sec-product">
+                                <div class="off-details">
+                                    <div class="offer-img">
+                                        <img src="img/products/50.webp" class="img-fluid" alt="offer-img">
+                                    </div>
+                                </div>
+                                <div class="off-info">
+                                    <h5 class="off-title"><a href="product-details.html"> جلسة علاج طبيعى</a></h5>
+                                    <p class="price"> 500 <span>ريال سعودى</span></p>
+                                    <div class="btn-book btn-offers text-center">
+                                        <a href="product-details.html">احجز الأن </a>
+                                        <a href="#" class="read-more"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="pagination-div">
+                        <ul class="pagination">
+                            <li><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                            <li><a class="page-number current" href="#">1</a></li>
+                            <li><a class="page-number" href="#">2</a></li>
+                            <li><a class="page-number" href="#">3</a></li>
+                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+              </div>
             </div>
         </section>
         <!-- end service section -->
-       
+         <!-- Start featured section -->
+         <section class="featured  ">
+            <div class="container">
+                <div class="featured-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-10 col-12">
+                            <div class="featured-text wow fadeInUp" data-wow-delay=".1s">
+                                <!-- <h6 class="sub-title">About El-Sumo Contracting Company</h6> -->
+                                <h2 class="f_p  main-title">هل ترغب في حجز موعدك الآن؟
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12 d-lg-flex justify-content-end">
+                            <div class="btn-book wow fadeInUp" data-wow-delay=".2s"><a href="#">احجز الأن <i
+                                        class="fa-regular fa-calendar-days"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end featured section -->
+       <!-- Start clients section -->
+        <section class="clients sec_pad">
+            <div class="container">
+                <h2 class="f_p  main-title top-title wow fadeInUp"> شركاء النجاح </h2>
+                <div class="clients_carousel owl-carousel wow fadeInUp">
+                    <div class="item">
+                        <div class="client-img"><img src="img/clients/3.webp" class="img-fluid"></div>
+                    </div>
+                    <div class="item">
+                        <div class="client-img"><img src="img/clients/3.webp" class="img-fluid"></div>
+                    </div>
+                    <div class="item">
+                        <div class="client-img"><img src="img/clients/3.webp" class="img-fluid"></div>
+                    </div>
+                    <div class="item">
+                        <div class="client-img"><img src="img/clients/3.webp" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--start footer-->
         <footer class="footer">
             <svg class="waves waves0" viewBox="0 24 170 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -456,6 +574,7 @@
                 <p class="copyright m-0"> جميع الحقوق محفوظه ل <a href="index.html">عيادات السمو 2024</a> </p>
             </div>
         </footer>
+        <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i> <span>1</span></a>
         <a id="back-to-top" style="display: block;"><i class="fas fa-arrow-up"></i></a>
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -464,6 +583,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="vendors/wow/wow.min.js"></script>
     <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/lightGallery-master/dist/js/lightgallery-all.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope-min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

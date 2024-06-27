@@ -333,7 +333,58 @@ $(document).ready(function () {
         },
     
     });
-    
+    /*-------------------------------------------------------------------------------
+	  product isotope js
+	-------------------------------------------------------------------------------*/
+    function productMasonry(){
+        var product = $("#work-product");
+        if( product.length ){
+            product.imagesLoaded( function() {
+              // images have loaded
+                // Activate isotope in container
+                product.isotope({
+                    isOriginLeft:false,
+                    itemSelector: ".product_item",
+                    layoutMode: 'masonry',
+                    filter:"*",
+                    animationOptions :{
+                        duration:1000
+                    },
+                    hiddenStyle: {
+                        opacity: 0,
+                        transform: 'scale(.4)rotate(60deg)',
+                    },
+                    visibleStyle: {
+                        opacity: 1,
+                        transform: 'scale(1)rotate(0deg)',
+                    },
+                    stagger: 0,
+                    transitionDuration: '0.9s',
+                    masonry: {
+                       
+                    }
+                });
+
+                // Add isotope click function
+                
+                var $filtersSelect = $('#product_filter');
+
+                // init Isotope
+                var $grid = $('.product_gallery').isotope({
+                itemSelector: '.product_item',
+                layoutMode: 'fitRows',
+                filter: $filtersSelect.val(),
+                });
+                // bind filter on select change
+                $filtersSelect.on( 'change', function() {
+                // get filter value from option value
+                $grid.isotope({ filter: this.value });
+                });
+
+            })
+        }
+    }
+    productMasonry();
 
     /*-------------------------------------------------------------------------------
 	  hamberger menu
@@ -380,5 +431,107 @@ $('.header_search .form-control-submit').click(function(e) {
             scrollTop: 0
         }, 500);
     });
+
+    $('.ps-products__gallery').lightGallery({
+        selector: '.offer-img a',
+        thumbnail: false,
+        share: false,
+        fullScreen: true,
+        autoplay: false,
+        autoplayControls: false,
+        actualSize: false,
+    });
+var sync1 = $("#sync1");
+var sync2 = $("#sync2");
+var slidesPerPage = 4; //globaly define number of elements per page
+var syncedSecondary = true;
+
+sync1.owlCarousel({
+  items : 1,
+  rtl: rtlVal,
+  slideSpeed : 2000,
+  nav: false,
+  autoplay: false,
+  dots: false,
+  loop: false,
+  responsiveRefreshRate : 200,
+  navText: [],
+}).on('changed.owl.carousel', syncPosition);
+
+sync2
+  .on('initialized.owl.carousel', function () {
+    sync2.find(".owl-item").eq(0).addClass("current");
+  })
+  .owlCarousel({
+  items : slidesPerPage,
+  margin:5,
+  dots: false,
+  rtl: rtlVal,
+  nav: false,
+  smartSpeed: 200,
+  slideSpeed : 500,
+  slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+  responsiveRefreshRate : 100
+}).on('changed.owl.carousel', syncPosition2);
+function syncPosition(el) {
+    //if you set loop tfalselse, you have to restore this next line
+    //var current = el.item.index;
+  
+    //if you disable loop yfalseave to comment this block
+    var count = el.item.count-1;
+    var current = Math.round(el.item.index - (el.item.count/2) - .5);
+  
+    if(current < 0) {
+      current = count;
+    }
+    if(current > count) {
+      current = 0;
+    }
+  
+    //end block
+  
+    sync2
+      .find(".owl-item")
+      .removeClass("current")
+      .eq(current)
+      .addClass("current");
+    var onscreen = sync2.find('.owl-item.active').length - 1;
+    var start = sync2.find('.owl-item.active').first().index();
+    var end = sync2.find('.owl-item.active').last().index();
+  
+    if (current > end) {
+      sync2.data('owl.carousel').to(current, 100, true);
+    }
+    if (current < start) {
+      sync2.data('owl.carousel').to(current - onscreen, 100, true);
+    }
+  }
+  
+  function syncPosition2(el) {
+    if(syncedSecondary) {
+      var number = el.item.index;
+      sync1.data('owl.carousel').to(number, 100, true);
+    }
+  }
+  
+  sync2.on("click", ".owl-item", function(e){
+    e.preventDefault();
+    var number = $(this).index();
+    sync1.data('owl.carousel').to(number, 300, true);
+  });
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+});
+$('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+});
 })(jQuery)
 
