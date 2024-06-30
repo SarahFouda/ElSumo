@@ -28,7 +28,7 @@ body {
 }
 .body_wrapper {
   z-index: 20;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a,
@@ -1619,6 +1619,32 @@ textarea {
 .serv_img img{
   border-radius: 25px;
 }
+.srv-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all .5s ease;
+}
+.srv-icon a{
+  color: #634091;
+  background: #f1f6fb;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  line-height: 47px;
+  font-size: 20px;
+}
+.sec-service:hover .srv-icon{
+  opacity: 1;
+  bottom: 0;
+}
 /*=========================start featured===========================*/
 .featured {
   position: relative;
@@ -2156,6 +2182,11 @@ p span {
 }
 .pos-list li.active{
   color:#75e0e3 ;
+}
+.sticky{
+  position: sticky;
+  top: 100px;
+  align-self: self-start;
 }
 /*========================end doctor============================*/
 /*========================start review============================*/
