@@ -24,11 +24,13 @@ $(document).ready(function () {
                 var scroll = $(window).scrollTop();
                 if (scroll) {
                     $("header").addClass("navbar_fixed");
-                } else {
+                } 
+                 else {
                     $("header").removeClass("navbar_fixed");
                 }
             });
         };
+       
     };
     navbarFixed();
     $('.dropdown').hover(function () {
@@ -214,29 +216,34 @@ $(document).ready(function () {
     var mydir= $("html").css("direction");
     var  rtlVal;
     if (mydir == 'rtl') {rtlVal = true;} else {rtlVal = false}
-    function mainSlider() {
         var main_slider = $(".main_carousel");
-        if (main_slider.length) {
             main_slider.owlCarousel({
                 loop: true,
                 rtl:rtlVal,
                 margin: 0,
                 items: 1,
                 autoplay: true,
-                smartSpeed: 2000,
-                autoplayTimeout: 5000,
-                animateOut: "fadeOut",
+                // smartSpeed: 2000,
+                // autoplayTimeout: 5000,
+                // animateOut: "fadeOut",
                 // animateIn: "slideInDown",  
-                responsiveClass: true,
+                // responsiveClass: true,
                 nav: true,
                 dots: false,
                 navText: ['<i class="ti-arrow-right"></i>', '<i class="ti-arrow-left"></i>'],
                 
-            })
-        }
-    }
-    wowAnimation();
-    mainSlider();
+            });
+    $('.main_carousel').on('changed.owl.carousel', function(e) {
+        var item = e.item.index-2;
+        $('.banner_top h2').removeClass('animated fadeInUp delay-2s');
+        $('.banner_top p').removeClass('animated fadeInUp delay-4s');
+        $('.banner_top .btn-book').removeClass('animated fadeInUp delay-6s');
+        $('.owl-item').not('.cloned').eq(item).find(".banner_top h2").addClass('animated fadeInUp delay-2s');
+        $('.owl-item').not('.cloned').eq(item).find(".banner_top p").addClass('animated fadeInUp delay-4s');
+        $('.owl-item').not('.cloned').eq(item).find(".banner_top .btn-book").addClass('animated fadeInUp delay-6s');
+      });  
+      new WOW().init();
+  
     function serviceSlider() {
         var service_slider = $(".services_carousel");
         if (service_slider.length) {
@@ -289,8 +296,6 @@ $(document).ready(function () {
         },
     
     });
-    
-   
     $('.reviews_carousel').owlCarousel({
         loop: false,
         margin: 20,
@@ -333,59 +338,7 @@ $(document).ready(function () {
         },
     
     });
-    /*-------------------------------------------------------------------------------
-	  product isotope js
-	-------------------------------------------------------------------------------*/
-    function productMasonry(){
-        var product = $("#work-product");
-        if( product.length ){
-            product.imagesLoaded( function() {
-              // images have loaded
-                // Activate isotope in container
-                product.isotope({
-                    isOriginLeft:false,
-                    itemSelector: ".product_item",
-                    layoutMode: 'masonry',
-                    filter:"*",
-                    animationOptions :{
-                        duration:1000
-                    },
-                    hiddenStyle: {
-                        opacity: 0,
-                        transform: 'scale(.4)rotate(60deg)',
-                    },
-                    visibleStyle: {
-                        opacity: 1,
-                        transform: 'scale(1)rotate(0deg)',
-                    },
-                    stagger: 0,
-                    transitionDuration: '0.9s',
-                    masonry: {
-                       
-                    }
-                });
-
-                // Add isotope click function
-                
-                var $filtersSelect = $('#product_filter');
-
-                // init Isotope
-                var $grid = $('.product_gallery').isotope({
-                itemSelector: '.product_item',
-                layoutMode: 'fitRows',
-                filter: $filtersSelect.val(),
-                });
-                // bind filter on select change
-                $filtersSelect.on( 'change', function() {
-                // get filter value from option value
-                $grid.isotope({ filter: this.value });
-                });
-
-            })
-        }
-    }
-    productMasonry();
-
+   
     /*-------------------------------------------------------------------------------
 	  hamberger menu
 	-------------------------------------------------------------------------------*/
@@ -431,7 +384,6 @@ $('.header_search .form-control-submit').click(function(e) {
             scrollTop: 0
         }, 500);
     });
-
     $('.ps-products__gallery').lightGallery({
         selector: '.offer-img a',
         thumbnail: false,
@@ -548,4 +500,3 @@ var $sticky_nav= $('.secondary_nav');
 	});
     
 })(jQuery)
-

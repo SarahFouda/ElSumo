@@ -1,0 +1,201 @@
+/*====================================================*/
+/*=== fonts ====*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Nunito Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito Sans:wght@200&family=Nunito+Sans:wght@200&display=swap');
+
+/*===== color =====*/
+/*====================================================*/
+/*====================================================*/
+
+  input[type=date]{
+    text-align: left;
+  }
+  input[type=date]::-webkit-calendar-picker-indicator {
+    right: 1.6rem;
+
+  }
+.f_p ,.navigation , .header .phone span, body {
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: capitalize;
+}
+.top-title::after{
+    left: 0;
+    right: auto;
+}
+.sm-book a{
+    font-size: 14px;
+}
+.submenu-indicator{
+    float: right;
+    margin-right: 0;
+    margin-left: 6px;
+}
+.nav-dropdown>li>a,.nav-dropdown>li{
+    float: left;
+}
+.nav-menus-wrapper-close-button{
+    float: right;
+}
+.nav-dropdown>li,.navigation-portrait .nav-menu>li>a{
+    text-align: left;
+}
+.navigation-portrait .submenu-indicator{
+    left: auto;
+    right: 0;
+}
+/* .top-header .contact-top li a i{
+    transform: rotate(252deg);
+} */
+.about_img img:nth-child(2){
+    left: auto;
+    right: 0;
+}
+/* .pr_50 {
+    padding-right: 0;
+    padding-left: 50px;
+} */
+.read-more .ti-arrow-left,.learn_btn_two .ti-arrow-left  {
+    transform: rotatey(180deg);
+    display: inline-block;
+}
+.header .phone i, .btn-book i{
+    margin-right: 0;
+    margin-left: 5px;
+}
+.footer-link ul>li{
+    float: left;
+}
+ .widget_content .contact-details-alt i{
+    padding-right: 10px;
+    padding-left: 0;
+}
+.footer-link ul>li i{
+    transform: rotatey(180deg);
+    display: inline-block;
+}
+.footer-link ul>li:hover {
+    padding-left: 10px;
+    padding-right: 0;
+}
+.learn_btn_two:before,.nav-dropdown>li>a::before{
+    right: auto;
+    left: 0;
+}
+.contact-form {
+    padding-right: 40px;
+    padding-left: 0;
+}
+.contact .con-icon{
+    right: auto;
+    left: 0;
+}
+.contact li{
+    padding-left: 70px;
+    padding-right: 0;
+}
+.lg-outer{
+    direction: ltr;
+}
+.header .open_search{
+    left: auto;
+    right: 0;
+}
+.navigation-portrait .nav-menus-wrapper{
+    left: -400px;
+    right: auto;
+}
+.nav-menus-wrapper.nav-menus-wrapper-open {
+    left: 0;
+    right: auto;
+}
+.card-input-element + .card{
+    margin: 0 20px 0 0;
+}
+.pos-list li{
+    margin-right: 0;
+    margin-left: 15px;
+    padding: 0 0 30px 30px;
+    border: none;
+    border-left: 2px dashed #63409147;
+}
+.pos-list li::before{
+    right:0;
+    left: -16px;
+}
+@media (max-width:767px) {
+  
+     .sec-checkout .number{
+        right: 10%;
+        left: auto;
+     }
+}
+@media (max-width: 991px) {
+    .header .header_search {
+        margin-right: 50px;
+    }
+    .nav-toggle{
+        right: 0;
+        left: auto;
+     }
+}
+.top-header li{
+    padding: 0 15px 0 0;
+}
+.header .phone{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.pr_20.border-top{
+    padding-left: 20px;
+    padding-right: 0;
+}
+.border-left{
+    border-right: none !important;
+    border-left: 1px solid #096780 !important
+}
+.pagination li:first-child a,
+.pagination li:last-child a{
+    transform: rotateY(180deg);
+}
+.breadcrumb-link li:before {
+    margin-right: 7px;
+    margin-left: 0;
+}
+/* .owl-carousel .owl-nav .owl-next{
+    right: 10px;
+    left: auto;
+   }
+   .owl-carousel .owl-nav .owl-prev{
+    left: 10px;
+    right: auto;
+   } */
+   .sale span{
+    left: auto;
+    right: 10px;
+   }
+   .header .phone a{
+    padding: 15px;
+   }
+   .bl-time i{
+    margin-left: 0;
+    margin-right: 5px;
+   }
+   .search_form .form-control-submit{
+    left: auto;
+    right: 5px;
+   }
+   .search_form .form-control{
+    padding-right: 35px;
+    padding-left: 22px;
+   }
+   input[type=date]::-webkit-calendar-picker-indicator {
+    right: 1.2rem;
+    left:auto;
+  }
+  .custom-select {
+    background: #6340911a url(../img/down-arrow-svgrepo-com.svg) 95%  center / 20px 20px no-repeat !important;
+  }
+  .number{
+    float: left;
+    margin: 0px 20px 20px 0;
+  }

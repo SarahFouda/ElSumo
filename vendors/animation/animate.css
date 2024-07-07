@@ -18,6 +18,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both
 }
+.delay-2s{
+    animation-delay: .2s;
+}
+
+.delay-4s{
+    animation-delay: .4s;
+}
+
+.delay-6s{
+    animation-delay: .6s;
+}
+
+.delay-8s{
+    animation-delay: .8s;
+}
+
+
 .animated.hinge {
     -webkit-animation-duration: 2s;
     animation-duration: 2s

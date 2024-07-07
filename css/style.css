@@ -1,9 +1,11 @@
 /*====================================================*/
 /*=== fonts ====*/
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Nunito Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito Sans:wght@200&family=Nunito+Sans:wght@200&display=swap');
-
+@font-face {
+  font-family: 'flat-jooza';
+  src: url('../fonts/flat-jooza-regular.eot');
+  src: local('جذور مسطح'), local('flat-jooza'),
+    url('../fonts/flat-jooza-regular.woff') format('woff');
+}
 /*===== color =====*/
 /*====================================================*/
 /*====================================================*/
@@ -19,7 +21,7 @@ body {
   font-size: 15px;
   line-height: 28px;
   font-weight: 400;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'flat-jooza', sans-serif;
   letter-spacing: 0px;
   color: #677294;
   padding: 0px;
@@ -75,7 +77,7 @@ button:focus {
 }
 
 .f_p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'flat-jooza', sans-serif;
 }
 
 .mt_10 {
@@ -298,6 +300,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 select option  {
   color: #555;
+}
+input[type=date]{
+  text-align: right;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+  left: 1.2rem;
+
 }
 /*====================================================*/
 /*====================================================*/
@@ -561,6 +570,7 @@ header{
 
 .top-header .contact-top li a i {
   color: #75e0e3;
+  transform: rotate(252deg);
 }
 
 .sticky_logo img+img {
@@ -581,7 +591,7 @@ header{
   height: 60px;
   display: table;
   position: relative;
-  font-family: 'Nunito Sans', sans-serif;
+  /* font-family: 'Nunito Sans', sans-serif; */
   background-color: transparent;
   text-transform: capitalize;
 
@@ -699,9 +709,9 @@ nav a:hover {
     right: 0;
     top: 14px;
     margin: auto;
-    background-color: #fff;
+    background-color: #634091;
     border-radius: 10px;
-    box-shadow: 0 0.4em 0 0 #fff, 0 0.8em 0 0 #fff;
+    box-shadow: 0 0.4em 0 0 #634091, 0 0.8em 0 0 #634091;
 }
 
 
@@ -746,7 +756,7 @@ nav a:hover {
   text-align: center;
   margin: 0 7px;
   display: none;
-  float: right;
+  float: left;
   color: #fff;
   font-size: 22px;
   font-weight: bold;
@@ -841,7 +851,7 @@ nav a:hover {
   height: auto;
   width: 100%;
   padding: 12px 15px 12px 26px;
-  text-align: left;
+  text-align: right;
 }
 
 .nav-menu>.active>a,
@@ -856,9 +866,9 @@ nav a:hover {
 }
 
 .submenu-indicator {
-  margin-left: 6px;
+  margin-right: 6px;
   margin-top: 7px;
-  float: right;
+  float: left;
   transition: all .3s
 }
 
@@ -955,14 +965,14 @@ nav a:hover {
 
 .nav-dropdown>li {
   width: 100%;
-  float: left;
+  float: right;
   clear: both;
   position: relative;
-  text-align: left
+  text-align: right
 }
 .nav-dropdown>li>a {
   padding: 10px 0;
-  float: left;
+  float: right;
   font-size: 14px;
   /* font-weight: 700; */
   color: #2c2a2b;
@@ -1044,7 +1054,7 @@ nav a {
 }
 
 .navigation-portrait .submenu-indicator {
-  right: 0;
+  left: 0;
   top: 0
 }
 
@@ -1102,7 +1112,7 @@ nav a {
 .header .phone i ,.btn-book i{
   color: #f2f2f2;
   font-size: 15px;
-  margin-left: 5px;
+  margin-right: 5px;
   text-align: center;
 }
 .header.header.navbar_fixed .phone a{
@@ -1139,10 +1149,10 @@ nav a {
   line-height: 45px;
 }
 
-.header  .open_search {
+.header .open_search {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   margin: 0px 2px 0px 0px;
   width: 25%;
   height: 0;
@@ -1353,7 +1363,9 @@ header.navbar_fixed .top-header{
 .banner_top .btn-book a{
   padding: 10px 20px;
 }
-
+.owl-dots{
+  margin-top: 30px;
+}
 .main_carousel .owl-nav button.owl-prev,
 .main_carousel .owl-nav button.owl-next {
   position: absolute;
@@ -1371,6 +1383,7 @@ header.navbar_fixed .top-header{
 
 .main_carousel .owl-nav button.owl-next {
   left: 50px;
+  right: auto;
 }
 
 .main_carousel .owl-nav button.owl-prev {
@@ -1386,7 +1399,7 @@ header.navbar_fixed .top-header{
   z-index: 99;
 }
 .waves0{
-  top: -1px;
+  top: -5px;
   bottom: auto;
   transform: rotate(180deg);
 }
@@ -1510,6 +1523,8 @@ header.navbar_fixed .top-header{
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   opacity: .7;
+  width: 100%;
+  object-fit: cover;
 }
 
 .sec-service:hover .pro-img img {
@@ -1575,10 +1590,10 @@ header.navbar_fixed .top-header{
     font-size: 10px !important;
  }
  .owl-carousel .owl-nav .owl-next{
-  right: 10px;
+  left: 10px;
  }
  .owl-carousel .owl-nav .owl-prev{
-  left: 10px;
+  right: 10px;
  }
 .owl-dots {
   text-align: center;
@@ -1618,6 +1633,7 @@ textarea {
 }
 .serv_img img{
   border-radius: 25px;
+  width: 100%;
 }
 .srv-icon {
   position: absolute;
@@ -1746,7 +1762,7 @@ textarea {
   height: 1px;
   width: 0;
   position: absolute;
-  left: 0;
+  right: 0;
   background: #75e0e3;
   bottom: 0;
   -webkit-transition: width 0.2s ease;
@@ -1756,7 +1772,7 @@ textarea {
 
 .learn_btn_two i {
   font-size: 13px;
-  padding-left: 5px;
+  padding-right: 5px;
   vertical-align: middle;
 }
 
@@ -1804,7 +1820,7 @@ textarea {
 .breadcrumb_area {
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 60vh;
   display: flex;
     justify-content: center;
@@ -1849,7 +1865,7 @@ textarea {
   display: inline-block;
   font-size: 24px;
   font-weight: 400;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
   line-height: 32px;
   text-transform: capitalize;
 
@@ -1944,7 +1960,7 @@ textarea {
 .about_img img:nth-child(2) {
   position: absolute;
   bottom: -100px;
-  right: 0;
+  left: 0;
   /* width: 60%; */
   /* border: 10px solid #ffffff;
   box-shadow: 0px 4px 50px 0px rgb(0 0 0 / 15%); */
@@ -1984,6 +2000,10 @@ textarea {
 }
 .sec-about .side-card{
   padding: 40px 30px;
+  min-height: 270px;
+}
+.sec-about .value-card{
+  min-height: 200px;
 }
 .sec-about h3{
   font-size: 20px;
@@ -2160,7 +2180,7 @@ p span {
   position:relative;
   font-weight: 700;
 }
-.pos-list li:last-child{ border-right:0;}
+.pos-list li:last-child{ border:none;}
 .pos-list li::before{
   position: absolute;
   right: -16px;
@@ -2242,7 +2262,7 @@ h5.rev-title {
   box-shadow: 0 5px 15px #63409114;
   border-radius: 10px;
   margin-bottom: 30px;
-  height: 230px;
+  height: 250px;
   overflow: hidden;
   background: #fff;
   padding: 10px;
@@ -2314,6 +2334,11 @@ border: 1px solid #f1f1f1;
   box-shadow: none;
   margin: 0;
   padding: 10px 0;
+  display: flex;
+ }
+ .blog-side .blog-details .blog-img,
+ .blog-side .blog-details .blog-info{
+  height: 100%;
  }
  .blog-side .bl-title {
   margin-bottom: 5px;
@@ -2441,7 +2466,7 @@ footer a:hover {
 .footer-link ul>li {
   width: 50%;
   /* padding-right: 10px; */
-  float: left;
+  float: right;
   margin-bottom: 10px;
   transition: all .3s ease;
   text-transform: capitalize;
@@ -2449,7 +2474,7 @@ footer a:hover {
 }
 
 .footer-link ul>li:hover {
-  padding-left: 10px;
+  padding-right: 10px;
   transition: all .3s ease;
 
 
@@ -2464,7 +2489,9 @@ footer a:hover {
   padding: 100px 0 90px;
   font-size: 14px;
 }
-
+.footer .social{
+  margin-top: 20px;
+}
 .footer .social li a {
   width: 40px;
   height: 40px;
@@ -2504,7 +2531,7 @@ footer a:hover {
 }
 
 .widget_content .contact-details-alt i {
-  padding-right: 5px;
+  padding-left: 5px;
   color: #75e0e3;
 
 }
@@ -2626,7 +2653,7 @@ footer li i {
 }
 
 .contact-form {
-  padding-right: 40px;
+  padding-left: 40px;
   margin-bottom: 50px;
 }
 
@@ -2635,7 +2662,7 @@ footer li i {
   color: #6E7A7A;
   font-size: 15px;
   font-weight: 400;
-  padding-left: 70px;
+  padding-right: 70px;
   margin-bottom: 40px;
 }
 
@@ -2647,7 +2674,7 @@ footer li i {
 .contact .con-icon {
   position: absolute;
   content: '';
-  left: 0px;
+  right: 0px;
   top: 0px;
   width: 48px;
   height: 48px;
@@ -2746,7 +2773,9 @@ footer li i {
 .lg-backdrop {
   background-color: rgb(0 0 0 / 70%);
 }
-
+.lg-outer{
+  direction: ltr;
+}
 .lg-outer .lg-thumb-outer {
   background-color: rgb(0 0 0 / 80%);
 }
@@ -3028,7 +3057,7 @@ input[type="checkbox"]:focus + label {
   top: -20px;
   left: 0;
   right: 0;
-  width: 50%;
+  width: 60%;
   margin: auto;
   text-align: center;
   background: #634091;
@@ -3153,7 +3182,7 @@ color: #fff;
 .sale span{
   position: absolute;
     top: 10px;
-    right: 10px;
+    left: 10px;
     background: #f8353e;
     /* background: #ffc107; */
     color: #fff;
