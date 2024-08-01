@@ -11,11 +11,14 @@
 /*====================================================*/
 a {
   text-decoration: none;
+  color: #677294;
 }
 
 a:hover,
 a:focus {
   text-decoration: none;
+  color: #634091;
+
 }
 body {
   font-size: 15px;
@@ -1515,6 +1518,7 @@ header.navbar_fixed .top-header{
   overflow: hidden;
   border-radius: 10px;
   background: #634091;
+  height: 200px;
 }
 
 .sec-service .pro-img img {
@@ -1524,6 +1528,7 @@ header.navbar_fixed .top-header{
   transition: 0.5s ease-in-out;
   opacity: .7;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -2120,9 +2125,16 @@ p span {
     text-align: center;
 }
 
+.doctors .doc-img{
+  height: 190px;
+  width: 190px;
+  margin: auto;
+}
 .doctors .doc-img img{
   border-radius: 50%;
   border: 8px solid #f1f6fb;
+  height: 100%;
+  object-fit: cover;
 }
 .doc-info{
   margin-top: 20px;
@@ -2864,10 +2876,17 @@ footer li i {
 .sec-offer .offer-img{
   margin-bottom: 20px;
   position: relative;
+  height: 200px;
+  width: 100%;
+}
+.offers-details .sec-offer .offer-img{
+  height: 365px;
 }
 .sec-offer .offer-img img{
   border-radius: 10px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .off-title a{
   color: #634091;
@@ -2996,50 +3015,9 @@ input[type="checkbox"]:focus + label {
   transition: border 0.3s;
 }
 
-/* .card-input-element:checked + .card::after {
-  content: "\f058";
-  color: #fff;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 900;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-animation-name: fadeInCheckbox;
-  animation-name: fadeInCheckbox;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-/* @-webkit-keyframes fadeInCheckbox {
-  from {
-    opacity: 0;
-    -webkit-transform: rotateZ(-20deg);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: rotateZ(0deg);
-  }
+ .offer-grid > div{
+  display: flex;
 }
-
-@keyframes fadeInCheckbox {
-  from {
-    opacity: 0;
-    transform: rotateZ(-20deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: rotateZ(0deg);
-  }
-} */
 
 /* ======== end offers ======= */
 /* ======== start contant us ======= */
