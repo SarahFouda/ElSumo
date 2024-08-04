@@ -91,6 +91,9 @@ margin-top: 0;
     .sec-checkout .offer-img{
         height: 130px !important;
     }
+    header.navbar_fixed {
+        animation: none;
+    }
 }
 
 @media (max-width:767px) {
