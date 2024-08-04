@@ -30,7 +30,7 @@
     }
     .blog-details .blog-img,.blog-details .blog-info{
         width: auto;
-        height: 300px;
+        /* height: 300px; */
     }
     .nav-dropdown,.nav-dropdown>li>a{
         background: transparent;
@@ -74,15 +74,22 @@ margin: 0;
     .about_area.mt_70{
 margin-top: 0;
     }
-    .sec-offer .offer-img,.sec-service .pro-img{
+    .sec-offer .offer-img{
         height: 155px;
     }
+   .sec-service .pro-img{
+        height: 250px;
+    }
+    
     .doctors .doc-img {
         height: 170px;
         width: 170px;
     }
     .offers-details .sec-offer .offer-img{
         height: auto;
+    }
+    .sec-checkout .offer-img{
+        height: 130px !important;
     }
 }
 
@@ -200,7 +207,10 @@ margin-top: 0;
     left: 10%;
     }
     .sec-offer .offer-img,.sec-service .pro-img{
-        height: 277px;
+        height: 270px;
+    }
+    .offer-grid > div {
+        display: block;
     }
 }
 

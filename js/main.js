@@ -266,7 +266,7 @@ $(document).ready(function () {
                         items: 2
                     },
                     1000: {
-                        items: 4
+                        items: 3
                     }
                 },
             })
@@ -497,6 +497,7 @@ $('.plus').click(function () {
     var $input = $(this).parent().find('input');
     $input.val(parseInt($input.val()) + 1);
     $input.change();
+    $input.innerHTML="Value = " + "'" + inputF.value + "'";
     return false;
 });
 var $sticky_nav= $('.secondary_nav');
