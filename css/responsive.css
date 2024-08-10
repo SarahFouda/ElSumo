@@ -32,9 +32,13 @@
         width: auto;
         /* height: 300px; */
     }
-    .nav-dropdown,.nav-dropdown>li>a{
-        background: transparent;
-    }
+    .nav-dropdown{
+        background: #bea1e42e;
+        border-radius: 0;
+        }
+        .nav-dropdown>li>a{
+            background: transparent;
+        }
     .nav-dropdown>li>a{
         color: #fff;
         padding: 10px 0 !important;
@@ -93,6 +97,12 @@ margin-top: 0;
     }
     header.navbar_fixed {
         animation: none;
+    }
+    .nav-submenu-open > a{
+        color: #75e0e3 !important;
+    }
+    .navigation-portrait .submenu-indicator.submenu-indicator-up .submenu-indicator-chevron{
+        border-color: transparent #75e0e3 #75e0e3 transparent;
     }
 }
 
