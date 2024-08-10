@@ -606,12 +606,10 @@ header{
   align-items: center;
   position: relative;
 }
-.social-menu{
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
+.social-menu,.social-menu .social{
+  margin: 0 !important;
 }
+
 .header .phone.menu-book i{
   color: #634091;
 }
@@ -2122,10 +2120,11 @@ p span {
 .sec-doctor{
   background-color: #fff;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 30px 15px;
     position: relative;
     margin-bottom: 30px;
     text-align: center;
+    width: 100%;
 }
 
 .doctors .doc-img{
@@ -2285,6 +2284,7 @@ h5.rev-title {
 .blog-details .blog-img {
 width: 40%;
 height: 230px;
+position: relative;
 } 
 .blog-details .blog-img img {
   width: 100%;
@@ -2292,6 +2292,7 @@ height: 230px;
   object-fit: cover;
   border-radius:7px;
 }
+
 .blog-details .blog-info {
 padding: 15px 20px;
 width: 66.66%;
@@ -2307,10 +2308,10 @@ flex-direction: column;
 -webkit-box-pack: center;
 -ms-flex-pack: center;
 justify-content: center;
+position: relative;
 }
 .bl-info {
   margin-top: 10px;
-
 }
 
 .blog-details h4 a,
@@ -2329,13 +2330,16 @@ justify-content: center;
     display: inline-block;
       margin-left: 50px;
   }
-  .bl-time{
+  .top-icon{
+    display: flex;
+    gap: 20px;
+  }
+   .bl-time,.blog-catg{
     font-size: 12px;
   }
-  .bl-time i {
+  .bl-time i ,.blog-catg i{
     color: #6DBABD;
     margin-left: 5px;
-    font-size: 11px;
   }
   .bl-info{
     margin-top: 10px;
@@ -2379,6 +2383,21 @@ border: 1px solid #f1f1f1;
   font-size: 20px;
   line-height: 40px;
   padding-bottom: 5px;
+}
+.tags a{
+  background: #634292;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 0 0 6px 1px;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  color: #fff;
+  transition: all .5s ease;
+}
+.tags a:hover{
+  background: #75e0e3;
+ color: #634292;
 }
 /*========================end blog============================*/
 
@@ -2858,8 +2877,13 @@ footer li i {
 }
 .client-img{
   padding: 10px;
-  width: 170px;
-  margin: auto;
+  max-width: 170px;
+  height: 55px;
+    margin: auto;
+}
+.client-img img{
+  height: 100%;
+  object-fit: fill;
 }
 /* ======== end clients ======= */
 .search-title{
